@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('category_id')->nullable()->constrained('categories', 'id')->cascadeOnDelete();
             $table->string('local');
             $table->string('title')->nullable();
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->unique(['category_id', 'local']);
 
         });
